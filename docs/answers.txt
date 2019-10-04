@@ -1,0 +1,40 @@
+a. On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+b. git rev-list --all --count
+   10 commits were made.
+
+c.  Wed Sep 25 18:13:30 2019
+git log .gitignore
+
+d. Branches are used in git repositories to make changes in different context of
+the master branch. This way multiple people can work on their own branch and then
+add the changes to master. It also helps in giving an organized history of
+the changes made towards a specific implementation.
+
+e. git status shows you which changes have been made to the repository
+locally, but have not been added.
+
+git log shows you the list of all changes made to the files in the repository.
+
+f.git log Vehicle.h
+
+g. git log --all --grep='file'
+
+h.
+
+  I. Inheritance: the ability of a class to get characteristics and properties
+     from another class.
+  II. Polymorphism: this means that the call of a function will have do something
+      different depending on what type of object it is being called with.
+  III. Encapsulation: process of combining data members and functions in a single
+       class.
+
+i. On the "Integration manager workflow" the integration manager is responsible
+  of checking the changes, on the other hand on the "Dictator and Lieutenant
+  Workflow", everyone works on their own master branch which is then merged
+  by the dictator.
+
+j.  The Dictator and Lieutenant is better for larger teams as they don't need
+  to explain all of their changes to a single person like in the other model.
