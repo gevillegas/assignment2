@@ -35,9 +35,9 @@ void Jet::setEngineSize(string engineSize) {
 }
 
 double Jet::mileageEstimate(double t) {
+  //source for randomly generated numbers: https://stackoverflow.com/questions/7560114/random-number-c-in-some-range
   srand(time(NULL));
   int rando = 40 + rand() % ((100 + 1) -40);
-  // std::cout << endl << "random:" <<  rando << endl << endl;
 
     double mileage =  rando * t;
     if (this->RocketBoost() == true) {

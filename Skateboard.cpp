@@ -14,6 +14,7 @@ Skateboard::Skateboard(string brand, string model) {
 Skateboard::~Skateboard() = default;
 
 double Skateboard::mileageEstimate(double t) {
+    //source for randomly generated numbers: https://stackoverflow.com/questions/19652657/c-create-a-random-decimal-between-0-1-and-10
     srand(time(NULL));
     std::random_device rd;
     std::default_random_engine generator(rd());

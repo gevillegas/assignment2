@@ -38,3 +38,13 @@ i. On the "Integration manager workflow" the integration manager is responsible
 
 j.  The Dictator and Lieutenant is better for larger teams as they don't need
   to explain all of their changes to a single person like in the other model.
+
+
+
+Question 5:
+
+I found that the driving simulator relies heavily on Polymorphism. This is
+due to many of the functions in the Vehicle and PowerVehicle classes having
+different usages depending on which vehicle object is calling it.
+
+As for encapsulation, I don't think it was found in this project.
