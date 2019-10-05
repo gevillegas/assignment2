@@ -3,12 +3,13 @@
 #include "Bicycle.h"
 #include "Jet.h"
 #include "Skateboard.h"
+#include "Unicycle.h"
 
 void printVehiclesRoster(Vehicle **vehicles, int size);
 
 int main() {
     std::cout << "Driving simulator" << std::endl;
-    int size = 8;
+    int size = 9;
     int capacity = 10;
     Vehicle **vehiclesArray = new Vehicle *[capacity];
 
@@ -19,8 +20,8 @@ int main() {
     vehiclesArray[4] = new Bicycle("Mizuno", "Wave", 10);
     vehiclesArray[5] = new Car("BMW", "X5", "diesel", "grande");
     vehiclesArray[6] = new Jet("brand", "model", "Rocket", "large", 3);
-    vehiclesArray[7] = new Skateboard("Mizuno", "Wave", 10);
-
+    vehiclesArray[7] = new Skateboard("Mizuno", "Wave");
+    vehiclesArray[8] = new Unicycle("Mizuno", "Wave");
     printVehiclesRoster(vehiclesArray, size);
 
     if (vehiclesArray != 0) { // If it is not a null pointer

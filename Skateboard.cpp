@@ -5,21 +5,13 @@
 #include <time.h>
 #include <random>
 
-Skateboard::Skateboard(string brand, string model, int gearCount) {
+Skateboard::Skateboard(string brand, string model) {
     setBrand(brand);
     setModel(model);
-    setGearCount(gearCount);
+
 }
 
 Skateboard::~Skateboard() = default;
-
-int Skateboard::getGearCount() {
-    return myGearCount;
-}
-
-void Skateboard::setGearCount(int gearCount) {
-    myGearCount = gearCount;
-}
 
 double Skateboard::mileageEstimate(double t) {
     srand(time(NULL));
@@ -41,6 +33,5 @@ double Skateboard::mileageEstimate(double t) {
 
 string Skateboard::toString() {
     string s = "-> Skateboard\n\t";
-    return "-> Skateboard\n" + Vehicle::toString() + "\n\tGears: " +
-           to_string(myGearCount);
+    return "-> Skateboard\n" + Vehicle::toString();
 }

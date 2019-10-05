@@ -5,16 +5,11 @@
 
 class Skateboard : public Vehicle {
 
-private:
-    int myGearCount;
-    int numberOfGears = 3;
-
 public:
-    explicit Skateboard(string brand, string model, int gearCount = 1);
+    explicit Skateboard(string brand, string model);
 
     virtual ~Skateboard();
-    int getGearCount();
-    void setGearCount(int gearCount);
+
     virtual double mileageEstimate(double time);
 
     virtual string toString();
