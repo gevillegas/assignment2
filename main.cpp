@@ -9,8 +9,8 @@ void printVehiclesRoster(Vehicle **vehicles, int size);
 
 int main() {
     std::cout << "Driving simulator" << std::endl;
-    int size = 9;
-    int capacity = 10;
+    int size = 12;
+    int capacity = 12;
     Vehicle **vehiclesArray = new Vehicle *[capacity];
 
     vehiclesArray[0] = new Car();
@@ -20,8 +20,11 @@ int main() {
     vehiclesArray[4] = new Bicycle("Mizuno", "Wave", 10);
     vehiclesArray[5] = new Car("BMW", "X5", "diesel", "grande");
     vehiclesArray[6] = new Jet("brand", "model", "Rocket", "large", 3);
-    vehiclesArray[7] = new Skateboard("Mizuno", "Wave");
-    vehiclesArray[8] = new Unicycle("Mizuno", "Wave");
+    vehiclesArray[7] = new Jet("brand", "model", "Not Rocket", "large", 3);
+    vehiclesArray[8] = new Skateboard("Mizuno", "Wave");
+    vehiclesArray[9] = new Skateboard("lol", "Wave");
+    vehiclesArray[10] = new Unicycle("Bill", "Gates");
+    vehiclesArray[11] = new Unicycle("Steve", "Jobs");
     printVehiclesRoster(vehiclesArray, size);
 
     if (vehiclesArray != 0) { // If it is not a null pointer
