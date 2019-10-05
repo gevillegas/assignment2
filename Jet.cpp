@@ -10,11 +10,12 @@ Jet::Jet() {
     setModel("VTx");
 }
 
-Jet::Jet(string brand, string model, string fuelType, string engineSize) {
+Jet::Jet(string brand, string model, string fuelType, string engineSize, int engines) {
     setBrand(brand);
     setModel(model);
     setFuelType(fuelType);
     setEngineSize(engineSize);
+    numberOfEngines = engines;
 }
 
 Jet::~Jet() = default;
@@ -39,7 +40,7 @@ double Jet::mileageEstimate(double t) {
   // std::cout << endl << "random:" <<  rando << endl << endl;
 
     double mileage =  rando * t;
-    if (fuelType == "electricity") {
+    if (this->RocketBoost() == true) {
         mileage += mileage * 0.05;
     }
     return mileage;
@@ -48,4 +49,13 @@ double Jet::mileageEstimate(double t) {
 string Jet::toString() {
     return "-> Jet\n" + PoweredVehicle::toString() + "\n\tEngine Size: " +
            getEngineSize();
+}
+
+bool Jet::RocketBoost(){
+  if(this->getFuelType() == "Rocket" && this->numberOfEngines>2){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
